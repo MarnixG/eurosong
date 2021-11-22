@@ -1,28 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Navigation/>
+    <h1>Eurosong festival</h1>
+<Counter/>
+
+    <div class="c-feedback warning">
+     Er is een fout gebeurd
+     </div>
+     <div class="c-feedback error">
+      'T is kapot
+      </div>
+
+      <div class="c-feedback succes">
+        Tis gelukt
+      </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+//Import of the whole styling for the app
+import style from "./scss/style.scss";
+import Navigation from "./components/Navigation.vue";
+import Counter from './components/Counter.vue';
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    Navigation,
+    Counter
   }
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
